@@ -1,0 +1,45 @@
+{
+  "name": "lazydev-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "dev:build": "tsc --watch",
+    "dev:run": "nodemon --watch dist dist/server.js",
+    "dev": "npm run build && concurrently \"npm:dev:*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@puppeteer/browsers": "^2.10.2",
+    "@reclaimprotocol/attestor-core": "^3.1.1",
+    "@reclaimprotocol/js-sdk": "^2.2.1",
+    "@reclaimprotocol/zk-fetch": "^0.3.0",
+    "better-sqlite3": "^11.9.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "marked": "^15.0.11",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.96.2",
+    "puppeteer": "^24.7.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/marked": "^6.0.0",
+    "@types/node": "^22.15.3",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.20.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
